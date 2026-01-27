@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطعم النخبة</title>
+    <style>
+        /* ======================
+           Reset بعض القواعد الأساسية
+        ====================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fff8f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* ======================
+           شريط التنقل العلوي
+        ====================== */
+        nav {
+            background-color: #ff6f3c;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 5px;
+        }
+
+        /* ======================
+           أقسام الصفحة
+        ====================== */
+        section {
+            padding: 40px 20px;
+        }
+
+        .hero {
+            background-color: #fff0e6;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* ======================
+           قائمة الطعام
+        ====================== */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .menu-item {
+            background-color: #ffe4d1;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .menu-item h3 {
+            margin-bottom: 5px;
+            color: #ff6f3c;
+        }
+
+        .menu-item p {
+            font-weight: bold;
+        }
+
+        /* ======================
+           نموذج تواصل معنا
+        ====================== */
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #ff6f3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e65a2f;
+        }
+
+        /* ======================
+           تذييل الصفحة
+        ====================== */
+        footer {
+            background-color: #ff6f3c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* ======================
+           متجاوب مع الموبايل
+        ====================== */
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- ======================
+         شريط التنقل العلوي
+    ====================== -->
+    <nav>
+        <h1>مطعم النخبة</h1>
+        <ul>
+            <li><a href="#home">الرئيسية</a></li>
+            <li><a href="#menu">القائمة</a></li>
+            <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+    </nav>
+
+    <!-- ======================
+         الصفحة الرئيسية
+    ====================== -->
+    <section id="home" class="hero">
+        <h2>مرحباً بكم في مطعم النخبة</h2>
+        <p>أفضل الأطباق العربية والمشاوي الأصيلة في بيروت.</p>
+        <p>العنوان: بيروت – شارع المثال | الهاتف: 70123456 | البريد: info@example.com</p>
+    </section>
+
+    <!-- ======================
+         قائمة الطعام
+    ====================== -->
+    <section id="menu">
+        <h2 style="text-align:center; margin-bottom:20px;">القائمة</h2>
+        <div class="menu">
+            <!-- مشاوي -->
+            <div class="menu-item">
+                <h3>كباب مشوي</h3>
+                <p>12,000 ل.ل</p>
+            </div>
+            <div class="menu-item">
+                <h3>شيش طاووق</h3>
+                <p>10,000 ل.ل</p>
+            </div>
+
+            <!-- وجبات سريعة -->
+            <div class="menu-item">
+                <h3>برغر دجاج</h3>
+                <p>8,000 ل.ل</p>
+            </div>
+            <div class="menu-item">
+                <h3>بطاطا مقلية</h3>
+                <p>4,000 ل.ل</p>
+            </div>
+
+            <!-- مشروبات -->
+            <div class="menu-item">
+                <h3>عصير برتقال</h3>
+                <p>3,000 ل.ل</p>
+            </div>
+            <div class="menu-item">
+                <h3>ماء</h3>
+                <p>1,500 ل.ل</p>
+            </div>
+
+            <!-- حلويات -->
+            <div class="menu-item">
+                <h3>كنافة</h3>
+                <p>5,000 ل.ل</p>
+            </div>
+            <div class="menu-item">
+                <h3>بقلاوة</h3>
+                <p>4,500 ل.ل</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================
+         تواصل معنا
+    ====================== -->
+    <section id="contact">
+        <h2 style="text-align:center; margin-bottom:20px;">تواصل معنا</h2>
+        <form action="#" method="POST">
+            <input type="text" name="name" placeholder="الاسم">
+            <input type="text" name="phone" placeholder="رقم الهاتف">
+            <textarea name="message" rows="5" placeholder="رسالتك"></textarea>
+            <input type="submit" value="أرسل">
+        </form>
+    </section>
+
+    <!-- ======================
+         تذييل الصفحة
+    ====================== -->
+    <footer>
+        <p>حقوق الطبع والنشر &copy; 2026 مطعم النخبة</p>
+    </footer>
+
+</body>
+</html>
