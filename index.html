@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elegant Restaurant</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #fdfdfd;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f39c12;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('restaurant.jpg') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    /* About Section */
+    .about {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .about p {
+      max-width: 600px;
+      margin: auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Menu Section */
+    .menu {
+      background: #f8f8f8;
+      padding: 3rem 2rem;
+    }
+
+    .menu h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #2c3e50;
+    }
+
+    .menu-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .menu-item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .menu-item h3 {
+      margin-bottom: 0.5rem;
+      color: #f39c12;
+    }
+
+    .menu-item p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Maison Cedre</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Fine Dining Experience</h2>
+      <p>Where tradition meets innovation</p>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At Maison Cedre, we craft Mediterranean-inspired dishes with locally sourced ingredients. Our elegant interiors and attentive service create the perfect atmosphere for casual gatherings and special occasions.</p>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <h3>Grilled Salmon</h3>
+        <p>Fresh Atlantic salmon served with seasonal vegetables.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Filet Mignon</h3>
+        <p>Premium cut beef with a rich red wine sauce.</p>
+      </div>
+      <div class="menu-item">
+        <h3>Vegetarian Risotto</h3>
+        <p>Creamy risotto with wild mushrooms and parmesan.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>📍 Sidon, Lebanon | 📞 +961 71 234 567 | ✉ maisoncedre@example.com</p>
+    <p>&copy; 2026 Maison Cedre. All rights reserved.</p>
+  </footer>
+</body>
+</html>
